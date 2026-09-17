@@ -1277,25 +1277,21 @@ a {
 
 .modal-close {
     position: absolute;
-
     right: 20px;
     top: 18px;
-
     width: 35px;
     height: 35px;
-
     border-radius: 50%;
-
     background: #fff2f6;
-
     color: #ed6388;
-
     font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-header {
     text-align: center;
-
     margin-bottom: 28px;
 }
 
@@ -1453,6 +1449,107 @@ a {
 
     box-shadow:
         0 8px 20px rgba(235,79,124,.22);
+}
+
+.form-group select {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #f0dce3;
+    border-radius: 12px;
+    outline: none;
+    background: #fffafb;
+    color: #57434b;
+    appearance: none;
+    cursor: pointer;
+}
+.form-group select:focus {
+    border-color: #ef7193;
+    background: white;
+    box-shadow:
+        0 0 0 3px rgba(239,113,147,.08);
+}
+
+/* ========================================
+    SCROLL REVEAL
+======================================== */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.interest-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.interest-item {
+    cursor: pointer;
+}
+
+.interest-item input {
+    display: none;
+}
+
+.interest-item span {
+    display: block;
+
+    padding: 12px 10px;
+
+    border: 1px solid #f0dce3;
+    border-radius: 12px;
+
+    background: #fffafb;
+
+    color: #927c85;
+
+    font-size: 13px;
+    text-align: center;
+
+    transition:
+        background .2s,
+        border-color .2s,
+        color .2s,
+        transform .1s;
+}
+
+.interest-item span:active {
+    transform: scale(.97);
+}
+
+.interest-item input:checked + span {
+    border-color: #ef7193;
+
+    background: #fff0f5;
+
+    color: #e85880;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 3px 10px rgba(239,113,147,.08);
+}
+
+.form-group label small {
+    display: inline-block;
+
+    margin-left: 5px;
+
+    color: #b59fa7;
+
+    font-size: 11px;
+    font-weight: 400;
 }
 
 
@@ -1828,21 +1925,14 @@ a {
 
         border-radius: 23px;
     }
-/* ========================================
-   SCROLL REVEAL
-======================================== */
+   
+    .interest-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-.reveal {
-    opacity: 0;
-    transform: translateY(25px);
+    .interest-item span {
+        padding: 11px 5px;
+        font-size: 12px;
+    }
 
-    transition:
-        opacity .7s ease,
-        transform .7s ease;
-}
-
-.reveal.show {
-    opacity: 1;
-    transform: translateY(0);
-}
 }
