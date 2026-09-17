@@ -222,7 +222,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 return checkbox.value;
             });
 
-            const preferredTraitsText = avoid.join(", ");
+            const preferredTraitsText = preferred.join(", ");
 
 
             /* -------------------------
